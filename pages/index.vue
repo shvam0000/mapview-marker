@@ -8,11 +8,6 @@
 import mapboxgl from "mapbox-gl";
 
 export default {
-  data() {
-    return {
-      marker: null,
-    };
-  },
   methods: {
     createMap() {
       mapboxgl.accessToken =
@@ -29,9 +24,6 @@ export default {
       // Adding marker to the map
       const el = document.getElementById("marker");
       el.classList.add("markerggg");
-      el.style.backgroundColor = "black";
-      el.style.width = "50px";
-      el.style.height = "50px";
 
       this.marker = new mapboxgl.Marker(el)
         .setLngLat([-122.420679, 37.772537])
@@ -48,3 +40,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.markerggg {
+  background-image: url("https://i.imgur.com/MK4NUzI.png");
+  background-size: 100%;
+  width: 50px;
+  height: 60px;
+}
+</style>
